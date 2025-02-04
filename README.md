@@ -38,7 +38,7 @@
    <h3>📥 Passos para Instalação</h3>
         <ol>
             <li>Clone este repositório:
-                <pre><code>git clone https://github.com/kailanesarah/project-store-car.git</code></pre>
+                <pre><code>git clone https://github.com/kailanesarah/project-store.git</code></pre>
             </li>
             <li>Acesse o diretório do projeto:
                 <pre><code>cd project-store-car</code></pre>
