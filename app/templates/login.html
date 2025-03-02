@@ -1,9 +1,15 @@
-{% extends 'estrutura.html' %} 
-{% block content %}
+{% extends 'estrutura.html' %}
+{% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+<div class="login-container">
+  <div class="login-form">
     <h1>Login</h1>
-    <form method="post" >
-        {% csrf_token %}
-        {{ form.as_p }} 
-        <button type="submit">Login</button>
+    <form method="post">
+      {% csrf_token %} 
+      {{ form.as_p }}
+      <button type="submit" class="btn">Login</button>
     </form>
+  </div>
+</div>
 {% endblock %}
+ 

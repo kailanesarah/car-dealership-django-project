@@ -1,0 +1,161 @@
+@import "global.css";
+
+/* Centraliza o container dos cards */
+.card-items {
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4; 
+}
+
+/* Grid responsivo */
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Estilo dos cards */
+.car-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Efeito ao passar o mouse */
+.car-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagens responsivas */
+.img-car {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Detalhes do card */
+.car-card-detail {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Conteúdo interno do card */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  text-align: center;
+}
+
+.card-content img{
+    width: 100%; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Nome do carro */
+.car-card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Botões dentro do card */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Estilização dos botões */
+.buttons button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #0056b3;
+}
+
+/* Responsividade */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .car-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .car-card {
+    max-width: 100%;
+  }
+
+  .car-card-detail {
+    width: 90%;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-items {
+    padding: 10px;
+  }
+
+  .car-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .car-card-detail {
+    width: 100%;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+}

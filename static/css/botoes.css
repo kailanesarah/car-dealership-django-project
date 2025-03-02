@@ -1,0 +1,63 @@
+/* Estilizando o container dos botões */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Adiciona um espaçamento superior */
+}
+
+/* Estilizando os botões */
+.btn {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Botão primário (Salvar Alterações) */
+.btn-primary {
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Botão de perigo (Deletar Carro) */
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #a71d2a;
+}
+
+/* Botão secundário (Cancelar) */
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #565e64;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

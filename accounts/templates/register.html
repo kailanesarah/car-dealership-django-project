@@ -1,29 +1,57 @@
-{% extends 'estrutura.html' %} 
-{% block content %}
+{% extends 'estrutura.html' %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/forms.css' %}" />
+<link rel="stylesheet" href="{% static 'css/botoes.css' %}" />
 
-<form method = "POST">
+<div class="form-container">
+  <form method="POST">
+    <h2>Cadastro</h2>
     {% csrf_token %}
+
     <div class="form-group">
-
-        {{user_form.username.errors}}
-        <label>Name:</label>
-        {{user_form.username}}
-
+      <label for="{{ user_form.username.id_for_label }}">Nome:</label>
+      {{ user_form.username }} {% if user_form.username.errors %}
+      <div class="error-message">
+        {% for error in user_form.username.errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
 
     <div class="form-group">
-        {{user_form.username.errors}}
-        <label>Password:</label>
-        {{user_form.password1}}
+      <label for="{{ user_form.password1.id_for_label }}">Senha:</label>
+      {{ user_form.password1 }} {% if user_form.password1.errors %}
+      <div class="error-message">
+        {% for error in user_form.password1.errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
 
+    <!-- Confirmar Senha -->
     <div class="form-group">
-        {{user_form.username.errors}}
-        <label>Confirm your Password:</label>
-        {{user_form.password2}}
+      <label for="{{ user_form.password2.id_for_label }}"
+        >Confirmar Senha:</label
+      >
+      {{ user_form.password2 }} {% if user_form.password2.errors %}
+      <div class="error-message">
+        {% for error in user_form.password2.errors %}
+        <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
 
-
-    <input name="Cadastrar" value="Cadastrar" type="Submit"/>
-</form>
+    <!-- Botão de Submissão -->
+    <div class="buttons-container">
+      <input
+        name="Cadastrar"
+        value="Cadastrar"
+        type="submit"
+        class="btn btn-primary"
+      />
+    </div>
+  </form>
+</div>
 {% endblock %}

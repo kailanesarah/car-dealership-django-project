@@ -1,0 +1,24 @@
+/* ============================= */
+/* Estilização do Rodapé */
+/* ============================= */
+footer {
+    background-color: var(--cor-dark-gray, #333); /* Cor de fundo escura */
+    color: var(--cor-light, #fff); /* Texto branco */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer p{
+    color: white;
+}
+/* ============================= */
+/* Faz com que o conteúdo ocupe todo o espaço disponível */
+/* ============================= */
+main {
+    flex: 1; /* Ocupa todo o espaço disponível antes do footer */
+}

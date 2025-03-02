@@ -1,0 +1,88 @@
+:root {
+    /* Cores Primárias */
+    --cor-primaria: rgb(5, 155, 147); 
+    --cor-primaria-hover: rgb(4, 122, 116); 
+    
+    /* Cores Secundárias */
+    --cor-primaria-blue: rgb(15, 170, 231); 
+    --cor-primaria-blue-hover: rgb(10, 111, 151); 
+    --cor-secundaria: #404040; 
+    --cor-light-gray: #d3d3d3; 
+    --white: #ffffff; 
+
+    /* Tipografia */
+    --fonte-principal: "Bricolage Grotesque", sans-serif; 
+    
+    /* Tamanhos de Fonte */
+    --font-size-title: 32px;      
+    --font-size-subtitle: 24px;   
+    --font-size-body: 16px;       
+    --font-size-paragraph: 16px;
+    --font-size-link: 16px;  
+
+    /* Espaçamentos */
+    --espacamento-padrao: 10px; 
+    --espacamento-grande: 20px; 
+    
+    /* Outros */
+    --border-radius: 10px; 
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fonte-principal);
+    font-size: var(--font-size-body); 
+    color: var(--cor-secundaria); 
+    background-color: var(--white); 
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilização de Títulos */
+h1, h2, h3 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+}
+
+h1 {
+    font-size: var(--font-size-title);
+    margin-bottom: var(--espacamento-grande);
+}
+
+h2 {
+    font-size: var(--font-size-subtitle);
+    margin-bottom: var(--espacamento-padrao);
+}
+
+p {
+    font-size: var(--font-size-paragraph);
+    margin-bottom: var(--espacamento-padrao);
+    color: #333333;
+    font-weight:600;
+}
+
+/* Estilização de Links */
+a {
+    font-size: var(--font-size-paragraph);
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Botões */
+button {
+    background-color: var(--cor-primaria);
+    color: var(--white);
+    padding: var(--espacamento-padrao) var(--espacamento-grande);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-body);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-hover);
+}

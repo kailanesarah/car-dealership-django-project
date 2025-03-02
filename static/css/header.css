@@ -1,0 +1,102 @@
+@import "global.css";
+
+/* Menu de navegação fixo */
+.nav-menu {
+  width: 100%;
+  background-color: var(--cor-primaria);
+  padding: var(--espacamento-padrao);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de navegação */
+.nav-lu {
+  display: flex;
+  gap: var(--espacamento-padrao);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Itens do menu */
+.item-li {
+  padding: var(--espacamento-padrao);
+}
+
+/* Links do menu */
+.item-li a {
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.item-li a:hover {
+  background-color: var(--cor-primaria-blue);
+  transform: scale(1.05);
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid #cecece;
+  transition: all 0.3s ease;
+}
+
+
+/* Responsividade */
+
+/* Para tablets e smartphones */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-lu {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .item-li {
+    padding: 10px 0;
+  }
+
+  .search-bar {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 80%;
+  }
+}
+
+/* Para smartphones pequenos */
+@media (max-width: 480px) {
+  .nav-menu {
+    padding: 10px;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
+}
